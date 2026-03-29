@@ -1156,7 +1156,7 @@ footer {
       </div>
       <div>
         <p class="contact-email-label">Get in touch</p>
-        <p class="contact-email-addr"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="afccc0c1dbceccdbefc1ced9cbcacadfdcc7ceddc2ce81ccc0c2">[email&#160;protected]</a></p>
+        <p class="contact-email-addr">contact@navdeepsharma.com</p>
       </div>
     </div>
     <p class="contact-note reveal">Based in Ontario, Canada · Available for remote engagements worldwide</p>
@@ -1175,7 +1175,7 @@ footer {
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 // Cursor
 const cursor = document.getElementById('cursor');
 const ring = document.getElementById('cursor-ring');
@@ -1197,4 +1197,10 @@ document.querySelectorAll('a, button').forEach(el => {
 });
 
 // Scroll reveal
-const observer = new Intersec
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
